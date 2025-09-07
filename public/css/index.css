@@ -1,0 +1,75 @@
+:root {
+    --light-gray: #ffffff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --primary-color: #007bff;
+}
+
+/* List group item */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: var(--light-gray);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.crypto-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.crypto-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.crypto-details div {
+    min-width: 120px;
+}
+
+.positive-change {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.negative-change {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+.view-chart-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.view-chart-btn:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+@media(max-width: 768px){
+    .crypto-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
